@@ -1,0 +1,13 @@
+version: '2'
+services:
+  server:
+    build: 
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ./:/var/www/html/
+    image: laravel-54
+    container_name: laravel-54-php
+    restart: unless-stopped
